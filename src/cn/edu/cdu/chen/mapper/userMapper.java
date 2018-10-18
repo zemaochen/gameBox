@@ -1,9 +1,10 @@
 package cn.edu.cdu.chen.mapper;
 
-import cn.edu.cdu.chen.pojo.user;
+import cn.edu.cdu.chen.pojo.User;
+
+import java.util.List;
 
 public interface userMapper {
-    public user getUser(int userId);
-    public int deleteUser(int userId);
-    public int insertUser(user user);
+    public User getUser(int userId);
+    public List<User> getAll();
 }

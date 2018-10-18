@@ -1,11 +1,13 @@
-
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.edu.cdu.Mapper.UserMapper">
-    <select id="getUser" parameterType="int" resultMap="user">
+<mapper namespace="cn.edu.cdu.chen.mapper.userMapper">
+    <select id="getUser" parameterType="int" resultMap="userMap">/*返回一个User对象*/
         select * from user where id=#{id}
     </select>
-    <resultMap id="user" type="user">
+    <select id="getAll" resultMap="userMap">/*返回一个list集合*/
+        select * from user
+    </select>
+    <resultMap id="userMap" type="User">
         <id column="id" property="id"/>
         <result column="name" property="name"/>
     </resultMap>
