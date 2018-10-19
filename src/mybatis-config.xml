@@ -23,5 +23,6 @@
     <mappers>
         <!--配置映射器  -->
         <mapper resource="cn/edu/cdu/chen/mapper/userMapper.xml"/>
+        <mapper resource="cn/edu/cdu/chen/mapper/gameMapper.xml"/>
     </mappers>
 </configuration>
